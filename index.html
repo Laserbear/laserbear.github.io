@@ -3,29 +3,27 @@
 <script type="text/javascript" src="rl.js">
 //neural net code goes here 
 var env = {};
-env.getNumStates = function() { return 8; }
-env.getMaxNumActions = function() { return 4; }
+env.getNumStates = function() { return 3; }
+env.getMaxNumActions = function() { return 3; }
 
 // create the DQN agent
-var spec = {}
-spec.update = 'qlearn'; // qlearn | sarsa
-spec.gamma = 0.9; // discount factor, [0, 1)
-spec.epsilon = 0.2; // initial epsilon for epsilon-greedy policy, [0, 1)
-spec.alpha = 0.01; // value function learning rate
-spec.experience_add_every = 10; // number of time steps before we add another experience to replay memory
-spec.experience_size = 5000; // size of experience replay memory
-spec.learning_steps_per_iteration = 20;
-spec.tderror_clamp = 1.0; // for robustness
-spec.num_hidden_units = 100 // number of neurons in hidden layer// see full options on DQN page
-agent = new RL.DQNAgent(env, spec); 
-
+var spec = { alpha: 0.01 } // see full options on DQN page
+agent = new rl.RL.DQNAgent(env, spec); 
+s = [0,1,2]
 setInterval(function(){ // start the learning loop
   var action = agent.act(s); // s is an array of length 8
-  var reward = 1;
+  var reward = 0;
+  if(action == 1){
+  	//turn right
+  	reward = 1;
+  }
+  else if (action == 2){
+  	//turn left
+  	reward = -1;
+  }
+  reward = 1;
   agent.learn(reward); // the agent improves its Q,policy,model, etc. reward is a float
 }, 0);
-
-
 </script>
 <body>
 "Fuck you"
