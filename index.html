@@ -21,7 +21,7 @@ agent = new RL.DQNAgent(env, spec);
 
 setInterval(function(){ // start the learning loop
   var action = agent.act(s); // s is an array of length 8
-  //... execute action in environment and get the reward
+  var reward = 1;
   agent.learn(reward); // the agent improves its Q,policy,model, etc. reward is a float
 }, 0);
 
