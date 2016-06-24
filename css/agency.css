@@ -24,7 +24,7 @@ a.active {
     outline: 0
 }
 a {
-    color: #fed136
+    color: #0000FF
 }
 a:hover,
 a:focus,
@@ -40,7 +40,8 @@ h5,
 h6 {
     font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: 700
+    font-weight: 700;
+    font-size: 40px;
 }
 .img-centered {
     margin: 0 auto
@@ -280,8 +281,13 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px
 }
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px
+}
 section h3.section-subheading {
-    font-size: 16px;
+    font-size: 25px;
     font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
     text-transform: none;
     font-style: italic;
