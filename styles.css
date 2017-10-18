@@ -3,6 +3,22 @@ body, html { width:100% ;
     overflow:hidden ;
 }
 
+input.username{
+    position: relative;
+    top: 343px;
+    left: -250px;
+    height:40px;
+    width:290px;
+}
+
+input.password{
+    position: relative;
+    top: 450px;
+    left: 50px;
+    height:40px;
+    width:290px;
+}
+
 iframe { width:100% ; // set your width here
         height:100% ;
     border:none ;
